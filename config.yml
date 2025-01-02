@@ -1,0 +1,16 @@
+keywords: ['Israel','Palestine','Russia','Ukraine','China']
+categories: ['domestic','politics','technology', 'world']
+start_date: '2024-03-01'
+end_date: '2024-08-28'
+dataset_name: 'politics_08-29-2024'
+
+url_pattern: r'http\S+|www\S+'
+unwanted_phrases: ['Image credit', 'Click to Read More', 'Click to Hide','View Comments','All rights reserved', 'Copyright']
+pattern: r'(' + '|'.join(unwanted_phrases) + r').*'
+
+size: 1000
+overlap: 150
+embedding_batch_size: 750
+
+model: 'text-embedding-3-small'
+top_k: 5
